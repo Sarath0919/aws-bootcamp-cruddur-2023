@@ -60,7 +60,7 @@ gp env AWS_DEFAULT_REGION=""
 ```
 
 
-10.  Created a Billing Alarm (after Budget)
+7.  Created a Billing Alarm (after Budget)
 
    * [Used this document](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/monitor_estimated_charges_with_cloudwatch.html) to set up a billing alarm using CloudWatch.
    * Also [read this blog](https://aws.amazon.com/blogs/mt/setting-up-an-amazon-cloudwatch-billing-alarm-to-proactively-monitor-estimated-charges/) to better understand how the services communicate with each other to send alerts.
@@ -73,7 +73,7 @@ aws cloudwatch put-metric-alarm --cli-input-json file://aws-metric-alarm-config.
 
 This started to alarm almost right away, initially because of insufficient data, so I will wait to see if it addresses itself once data starts being tracked properly.
 
-11.  Created a Budget
+8.  Created a Budget
 
    * Used the JSON from [this article](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/budgets/create-budget.html) to create a billing budget.  Stored a modified copy of it here.
 
