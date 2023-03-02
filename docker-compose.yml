@@ -17,6 +17,11 @@ services:
       - "3000:3000"
     volumes:
       - ./frontend-react-js:/frontend-react-js
+    command: sh -c "npm i && npm start"
+    depends_on:
+      - backend-flask
+    networks:
+      - internal-network
 
 # the name flag is a hack to change the default prepend folder
 # name when outputting the image names
