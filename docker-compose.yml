@@ -18,8 +18,8 @@ services:
     volumes:
       - ./frontend-react-js:/frontend-react-js
     command: sh -c "npm i && npm start"
-    depends_on:
-      - backend-flask
+#    depends_on:
+#      - backend-flask
     networks:
       - internal-network
 
